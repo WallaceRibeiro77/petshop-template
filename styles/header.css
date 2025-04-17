@@ -1,0 +1,37 @@
+header{
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    
+    .header{
+        width: 52.7rem;
+        h1{
+            color: var(--content-primary);
+            font: 700 normal 2.4rem/3.2rem var(--inter);
+        }
+        p{
+            color: var(--content-secondary);
+            font: 500 normal 1.4rem/2.4rem var(--inter);
+        }
+    }
+    .input-calendar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .8rem;
+        padding: 1.2rem;
+        border-radius: .8rem;
+        
+        border: 1px solid var(--border-primary);
+
+        &img{
+            width: 2rem;
+            height: 2rem;
+        }
+        
+        &button{
+            color: var(--content-secondary);
+            font: 400 normal 1.6rem/15rem var(--inter);
+        }
+    }
+}

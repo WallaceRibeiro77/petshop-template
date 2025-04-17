@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-family: var(--inter);
+    --inter: "Inter";
+    --inter-t: "Inter Tight";
+   
+    font-size: 62.5%;
+
+    --content-primary: #FFFFFF;
+    --content-secondary: #98959D;
+    --content-tertiary: #666666;
+    --content-brand: #9282FA;
+    
+    --background-primary: #151515;
+    --background-secondary: #1E1E1E;
+    --background-tertiary: #23242C;
+    --background-brand: #9282FA;
+    --background-highlights: #BDB4F4;
+
+    --border-primary: #3E3C41;
+    --border-secondary: #86818C;
+    --border-brand: #9282FA;
+    --border-divisor: #353339;
+}
+
+::-webkit-scrollbar {
+    width: 0.3rem;
+  }
+  
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+body{
+    font-size: 1.6rem;
+    background-color: black;
+    color: white;
+}
+
+.container{
+    width: 87.1rem;
+    padding: 8rem;
+    margin: 0 auto;
+    border: 1px solid red;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1.2rem 2rem;
+    border-radius: 0 0 1.2rem 0;
+    background: #2E2C30;
+    color: var(--content-brand);
+    cursor: pointer;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    &:hover{
+        filter: brightness(1.2);
+    }
+    & span{
+        font: 700 1.6rem/2.4rem var(--inter);
+    }
+}

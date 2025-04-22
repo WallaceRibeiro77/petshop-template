@@ -35,7 +35,7 @@
                 <div class="schedule">
                     <ul class="schedule-list">
                         <li>
-                            <div class="info-user">
+                            <div class="info">
                                 <h3>09:00</h3>
                                 <p>Pet name <span>/ nome tutor</span></p>
                             </div>
@@ -58,7 +58,7 @@
                 <div class="schedule">
                     <ul class="schedule-list">
                         <li>
-                            <div class="info-user">
+                            <div class="info">
                                 <h3>13:00</h3>
                                 <p>Pet name <span>/ nome tutor</span></p>
                             </div>
@@ -68,7 +68,7 @@
                             <button>Remover agendamento</button>
                         </li>
                         <li>
-                            <div class="info-user">
+                            <div class="info">
                                 <h3>14:00</h3>
                                 <p>Pet name <span>/ nome tutor</span></p>
                             </div>
@@ -78,7 +78,7 @@
                             <button>Remover agendamento</button>
                         </li>
                         <li>
-                            <div class="info-user">
+                            <div class="info">
                                 <h3>15:00</h3>
                                 <p>Pet name <span>/ nome tutor</span></p>
                             </div>
@@ -101,7 +101,7 @@
                 <div class="schedule">
                     <ul class="schedule-list">
                         <li>
-                            <div class="info-user">
+                            <div class="info">
                                 <h3>20:00</h3>
                                 <p>Pet name <span>/ nome tutor</span></p>
                             </div>
@@ -114,6 +114,53 @@
                 </div>
             </section>
         </main>
+        <footer>
+            <button>novo agendamento</button>
+        </footer>
+    </div>
+    <div class="schedule-modal">
+        <div class="modal-header">
+            <h2>Agende um atendimento</h2>
+            <p>Preencha os dados do cliente para realizar o agendamento:</p>
+        </div>
+        <div class="modal-input-wrapper">
+            <div class="input">
+                <label for="tutor">Nome do tutor</label>
+                <div>
+                    <img src="assets/User.svg" alt="icone de usuario">
+                    <input type="text" id="tutor" placeholder="Jhon Snow" required>
+                </div>
+            </div>
+            <div class="input">
+                <label for="pet">Nome do pet</label>
+                <div>
+                    <img src="assets/pet-paw--paw-foot-animals-pets-footprint-track-hotel.svg" alt="icone de uma pata de cachorro">
+                    <input type="text" id="pet" placeholder="Cheddar" required>
+                </div>
+            </div>
+            <div class="input">
+                <label for="telefone">Telefone</label>
+                <div>
+                    <img src="assets/Phone.svg" alt="icone de telefone">
+                    <input type="text" id="telefone" placeholder="(00) 0 0000-0000" required>
+                </div>
+            </div>
+            <div class="input">
+                <label for="service">Descrição do serviço</label>
+                <textarea name="service" id="service" rows="5" cols="5" placeholder="Banho e tosa" ></textarea>
+            </div>
+            <div class="input-time">
+                <div>
+                    <label for="data">Data</label>
+                    <input type="date" name="data" id="data">
+                </div>
+                <div>
+                    <label for="hora">Hora</label>
+                    <input type="datetime-local" name="hora" id="hora">
+                </div>
+            </div>
+        </div>
+        <button>Agendar</button>
     </div>
     <script type="module" src="js/index.js"></script>
 </body>

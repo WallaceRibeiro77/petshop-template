@@ -42,14 +42,57 @@ main{
                     gap: 1.2rem;
                     padding: 2rem;
                     
-                    .info-user{
+                    .info{
                         display: flex;
                         align-items: center;
                         gap: 1.6rem;
+                        
+                        h3{
+                            color: var(--content-primary);
+                            font-family: var(--inter);
+                            font-size: 1.4rem;
+                            font-weight: 700;
+                            line-height: 2.4rem;
+                        }
+                        p{
+                            color: var(--content-primary);
+                            font-family: var(--inter);
+                            font-size: 1.2rem;
+                            font-weight: 600;
+                            line-height: 1.6rem;
+                            
+                            span{
+                                color: var(--content-secondary);
+                                font-family: var(--inter);
+                                font-size: 1.2rem;
+                                font-weight: 400;
+                                line-height: 1.6rem;
+                            }
+                        }
+                    }
+                    .service{
+                        span{
+                            color: var(--content-secondary);
+                            font-family: var(--inter);
+                            font-size: 1.2rem;
+                            font-weight: 400;
+                            line-height: 1.6rem;
+                        }
                     }
 
                     button{
-
+                        color: var(--content-tertiary);
+                        font-family: var(--inter);
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                        line-height: 1.6rem;
+                        background: transparent;
+                        outline: 0;
+                        border: 0;
+                        &:hover{
+                            cursor: pointer;
+                            filter: brightness(1.5);
+                        }
                     }
                 }
             }

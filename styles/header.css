@@ -2,6 +2,7 @@ header{
     display: flex;
     align-items: center;
     gap: 1.2rem;
+    margin-bottom: 3.2rem;
     
     .header{
         width: 52.7rem;
@@ -17,21 +18,29 @@ header{
     .input-calendar{
         display: flex;
         align-items: center;
-        justify-content: center;
         gap: .8rem;
         padding: 1.2rem;
         border-radius: .8rem;
-        
         border: 1px solid var(--border-primary);
 
-        &img{
+        img:nth-child(3){
+            cursor: pointer;
             width: 2rem;
             height: 2rem;
         }
         
-        &button{
+        input[type="date"]{
+            padding: .8rem;
+            background: url(--background-primary);
             color: var(--content-secondary);
-            font: 400 normal 1.6rem/15rem var(--inter);
+            font: 400 normal 1.6rem/1.5rem var(--inter);
+            text-align: center;
+            outline: 0;
+            border: 0;
+            
+            &::-webkit-calendar-picker-indicator{
+                display: none;
+            }
         }
     }
 }

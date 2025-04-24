@@ -41,7 +41,9 @@ body{
     background-color: black;
     color: white;
 }
-
+.hidden{
+    visibility: hidden;
+}
 .container{
     width: 87.1rem;
     padding: 8rem;

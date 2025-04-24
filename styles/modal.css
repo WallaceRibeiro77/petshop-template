@@ -1,0 +1,164 @@
+.schedule-modal{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50rem;
+    padding: 4rem;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 2.8rem;
+    border-radius: 1.2rem;
+    background-color: var(--background-tertiary);
+
+    .container-modal{
+        display: flex;
+        flex-direction: column;
+        gap: 2.8rem;
+
+        .modal-header{
+            display: flex;
+            flex-direction: column;
+            gap: .4rem;
+            
+            h2{
+                color: var(--content-primary);
+                font-family: var(--inter);
+                font-size: 2.4rem;
+                font-weight: 700;
+                line-height: 3.2rem;
+            }
+            p{
+                color: var(--content-secondary);
+                font-family: var(--inter);
+                font-size: 1.4rem;
+                font-weight: 500;
+                line-height: 2.4rem;
+            }
+        }
+        .modal-input-wrapper{
+            display: flex;
+            flex-direction: column;
+            gap: 1.6rem;
+
+            .input{
+                display: flex;
+                flex-direction: column;
+                gap: .4rem;
+                padding: 1.2rem;
+
+                label{
+                    color: var(--content-primary);
+                    font-family: var(--inter);
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                    line-height: 2.4rem;
+                }
+                div{
+                    display: flex;
+                    gap: .8rem;
+
+                    input{
+                        background: transparent;
+                        outline: 0;
+                        width: 100%;
+                        padding: 1.2rem;
+                        border-radius: 8px;
+                        border: 1px solid var(--border-primary);
+                        
+                        &::placeholder{
+                            color: var(--content-secondary);
+                            font-family:var(--inter);
+                            font-size: 1.6rem;
+                            font-weight: 400;
+                            line-height: 2.4rem;
+                        }
+                    }
+                }
+                textarea{
+                    height: 8.3rem;
+                    padding: 1.2rem;
+                    background: transparent;
+                    outline: 0;
+                    width: 100%;
+                    padding: 1.2rem;
+                    border-radius: .8rem;
+                    border: 1px solid var(--border-primary);
+                    resize: none;
+                    color: var(--content-secondary);
+                }
+            }
+            .input-time{
+                display: flex;
+                justify-content: space-around;
+                gap: 1.6rem;
+                
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    
+                    label{
+                        color: var(--content-primary);
+                        font-family: var(--inter);
+                        font-size: 1.4rem;
+                        font-weight: 700;
+                        line-height: 2.4rem;
+                    }
+                    .input-date-modal{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        max-width: 40rem;
+                        
+                        gap: .8rem;
+                        padding: 1.2rem;
+                        border-radius: .8rem;
+                        border: 1px solid var(--border-primary);
+                        background: var(--background-tertiary);
+                        
+                        img:nth-child(3){
+                            cursor: pointer;
+                            width: 2rem;
+                            height: 2rem;
+                        }
+                        
+                        input{
+                            padding: .8rem;
+                            background: var(--background-tertiary);
+                            color: var(--content-secondary);
+                            font: 400 normal 1.6rem/1.5rem var(--inter);
+                            text-align: center;
+                            outline: 0;
+                            border: 0;
+                            
+                            &::-webkit-calendar-picker-indicator{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .btn{
+            color: #050505;
+            width: 12.3rem;
+            text-align: center;
+            font-family: var(--inter);
+            font-size: 1.6rem;
+            font-weight: 700;
+            line-height: 2.4rem;
+            height: 4.8rem;
+            padding: 1.2rem 2.4rem;
+            border-radius: .8rem;
+            background: var(--content-brand);
+            margin: 0 0 0 auto;
+            
+            &:hover{
+                cursor: pointer;
+                filter: brightness(1.5);
+            }
+        
+        }
+    }
+}

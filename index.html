@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="container">
-        <button class="logo"><img src="assets/Dog-Duotone--Streamline-Phosphor.svg" alt=""><span>MUNDO PET</span></button>
+        <div class="logo"><img src="assets/Dog-Duotone--Streamline-Phosphor.svg" alt=""><span>MUNDO PET</span></div>
         <header>
             <div class="header">
                 <h1>Sua agenda</h1>
@@ -19,7 +19,7 @@
             </div>
             <div class="input-calendar">
                 <img src="assets/Calendar Minimalistic.svg" alt="">
-                <input type="date" id="data-agenda" placeholder="dd/mm/aaaa">
+                <input type="date" id="data-agenda">
                 <img src="assets/Icon.svg" alt="abrir calendario" class="open-calendar">
             </div>
         </header>
@@ -42,7 +42,7 @@
                             <div class="service">
                                 <span>Vacinação</span>
                             </div>
-                            <button>Remover agendamento</button>
+                            <button aria-label="Remover agendamento das 09h">Remover agendamento</button>
                         </li>
                     </ul>
                 </div>
@@ -65,7 +65,7 @@
                             <div class="service">
                                 <span>Vacinação</span>
                             </div>
-                            <button>Remover agendamento</button>
+                            <button aria-label="Remover agendamento das 13h">Remover agendamento</button>
                         </li>
                         <li>
                             <div class="info">
@@ -75,7 +75,7 @@
                             <div class="service">
                                 <span>Vacinação</span>
                             </div>
-                            <button>Remover agendamento</button>
+                            <button aria-label="Remover agendamento das 13h">Remover agendamento</button>
                         </li>
                         <li>
                             <div class="info">
@@ -85,7 +85,7 @@
                             <div class="service">
                                 <span>Vacinação</span>
                             </div>
-                            <button>Remover agendamento</button>
+                            <button aria-label="Remover agendamento das 18h">Remover agendamento</button>
                         </li>
                     </ul>
                 </div>
@@ -94,7 +94,7 @@
                 <div class="schedule-header">
                     <div>
                         <img src="assets/Moon-Stars--Streamline-Solar.svg" alt="icone de um sol">
-                        <h2>Manhã</h2>
+                        <h2>Noite</h2>
                     </div>
                     <span>19h-21h</span>
                 </div>
@@ -118,49 +118,59 @@
             <button>novo agendamento</button>
         </footer>
     </div>
-    <div class="schedule-modal">
-        <div class="modal-header">
-            <h2>Agende um atendimento</h2>
-            <p>Preencha os dados do cliente para realizar o agendamento:</p>
+    <div class="schedule-modal hidden">
+        <div class="container-modal">
+            <div class="modal-header">
+                <h2>Agende um atendimento</h2>
+                <p>Preencha os dados do cliente para realizar o agendamento:</p>
+            </div>
+            <div class="modal-input-wrapper">
+                <div class="input">
+                    <label for="tutor">Nome do tutor</label>
+                    <div>
+                        <img src="assets/User.svg" alt="icone de usuario">
+                        <input type="text" id="tutor" placeholder="Jhon Snow" required>
+                    </div>
+                </div>
+                <div class="input">
+                    <label for="pet">Nome do pet</label>
+                    <div>
+                        <img src="assets/pet-paw--paw-foot-animals-pets-footprint-track-hotel.svg" alt="icone de uma pata de cachorro">
+                        <input type="text" id="pet" placeholder="Cheddar" required>
+                    </div>
+                </div>
+                <div class="input">
+                    <label for="telefone">Telefone</label>
+                    <div>
+                        <img src="assets/Phone.svg" alt="icone de telefone">
+                        <input type="text" id="telefone" placeholder="(00) 0 0000-0000" required>
+                    </div>
+                </div>
+                <div class="input">
+                    <label for="service">Descrição do serviço</label>
+                    <textarea name="service" id="service" placeholder="Banho e tosa" ></textarea>
+                </div>
+                <div class="input-time">
+                    <div>
+                        <label for="modal-data">Data</label>
+                        <div class="input-date-modal">
+                            <img src="assets/Calendar Minimalistic.svg" alt="icone de calendario">
+                            <input type="date" name="data" id="modal-data">
+                            <img src="assets/Icon.svg" alt="icone de imagem de seta para baixo">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="hora">Hora</label>
+                        <div class="input-date-modal">
+                            <img src="assets/Clock Circle.svg" alt="icone de relogio">
+                            <input type="time" name="hora" id="hora">
+                            <img src="assets/Icon.svg" alt="icone de imagem de seta para baixo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn">Agendar</button>
         </div>
-        <div class="modal-input-wrapper">
-            <div class="input">
-                <label for="tutor">Nome do tutor</label>
-                <div>
-                    <img src="assets/User.svg" alt="icone de usuario">
-                    <input type="text" id="tutor" placeholder="Jhon Snow" required>
-                </div>
-            </div>
-            <div class="input">
-                <label for="pet">Nome do pet</label>
-                <div>
-                    <img src="assets/pet-paw--paw-foot-animals-pets-footprint-track-hotel.svg" alt="icone de uma pata de cachorro">
-                    <input type="text" id="pet" placeholder="Cheddar" required>
-                </div>
-            </div>
-            <div class="input">
-                <label for="telefone">Telefone</label>
-                <div>
-                    <img src="assets/Phone.svg" alt="icone de telefone">
-                    <input type="text" id="telefone" placeholder="(00) 0 0000-0000" required>
-                </div>
-            </div>
-            <div class="input">
-                <label for="service">Descrição do serviço</label>
-                <textarea name="service" id="service" rows="5" cols="5" placeholder="Banho e tosa" ></textarea>
-            </div>
-            <div class="input-time">
-                <div>
-                    <label for="data">Data</label>
-                    <input type="date" name="data" id="data">
-                </div>
-                <div>
-                    <label for="hora">Hora</label>
-                    <input type="datetime-local" name="hora" id="hora">
-                </div>
-            </div>
-        </div>
-        <button>Agendar</button>
     </div>
     <script type="module" src="js/index.js"></script>
 </body>

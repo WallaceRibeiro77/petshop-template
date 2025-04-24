@@ -1,9 +1,18 @@
-document.querySelector('.open-calendar').addEventListener('click', function () {
-    const input = document.querySelector('#data-agenda');
-    if (input.showPicker) {
-      input.showPicker(); // <-- Isso é permitido porque estamos dentro de um evento de clique
-    } else {
-      input.focus(); // fallback para navegadores sem suporte
-    }
+document.querySelectorAll('.input-calendar img.open-calendar, .input-date-modal img:last-child')
+  .forEach(icon => {
+    icon.addEventListener('click', function () {
+      // Encontra o input que está antes do ícone dentro do mesmo contêiner
+      const input = this.parentElement.querySelector('input');
+
+      if (!input) return;
+
+      if (typeof input.showPicker === 'function') {
+        input.showPicker();
+      } else {
+        input.focus();
+      }
+    });
   });
+
+
   

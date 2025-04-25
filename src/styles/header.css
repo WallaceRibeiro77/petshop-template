@@ -31,7 +31,7 @@ header{
         
         input[type="date"]{
             padding: .8rem;
-            background: url(--background-primary);
+            background-color: var(--background-primary);
             color: var(--content-secondary);
             font: 400 normal 1.6rem/1.5rem var(--inter);
             text-align: center;
